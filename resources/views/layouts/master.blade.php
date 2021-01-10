@@ -13,22 +13,21 @@
 
         <title>@yield('title')</title>
     <!-- Bootstrap style --> 
-        <link id="callCss" rel="stylesheet" href="themes/bootshop/bootstrap.min.css" media="screen"/>
-        <link href="themes/css/base.css" rel="stylesheet" media="screen"/>
+        <link id="callCss" rel="stylesheet" href="{{asset('themes/bootshop/bootstrap.min.css')}}" media="screen"/>
+        <link href="{{asset('themes/css/base.css')}}" rel="stylesheet" media="screen"/>
     <!-- Bootstrap style responsive -->	
-        <link href="themes/css/bootstrap-responsive.min.css" rel="stylesheet"/>
-        <link href="themes/css/font-awesome.css" rel="stylesheet" type="text/css">
+        <link href="{{asset('themes/css/bootstrap-responsive.min.css')}}" rel="stylesheet"/>
+        <link href="{{asset('themes/css/font-awesome.css')}}" rel="stylesheet" type="text/css">
     <!-- Google-code-prettify -->	
-        <link href="themes/js/google-code-prettify/prettify.css" rel="stylesheet"/>
+        <link href="{{asset('themes/js/google-code-prettify/prettify.css')}}" rel="stylesheet"/>
     <!-- fav and touch icons -->
-        <link rel="shortcut icon" href="themes/images/ico/favicon.ico">
+        <link rel="shortcut icon" href="{{asset('themes/images/ico/favicon.ico')}}">
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{asset('themes/images/ico/apple-touch-icon-144-precomposed.png')}}">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{{asset('themes/images/ico/apple-touch-icon-114-precomposed.png')}}">
         <link rel="apple-touch-icon-precomposed" sizes="72x72" href="{{asset('themes/images/ico/apple-touch-icon-72-precomposed.png')}}">
         <link rel="apple-touch-icon-precomposed" href="{{asset('themes/images/ico/apple-touch-icon-57-precomposed.png')}}">
         <style type="text/css" id="enject"></style>
-        {{-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-        <link href="{{asset('css/app.css')}}" rel="stylesheet"> --}}
+        
 
 
     </head>
@@ -60,8 +59,9 @@
 	    </div>
         
         @include('inc.footer')
-        <script src="{{URL::to('/themes/js/jquery.js" type="text/javascript')}}"></script>
-        <script src="{{URL::to('/themes/js/bootstrap.min.js" type="text/javascript')}}"></script>
+        
+        <script src="{{URL::to('/themes/js/jquery.js')}}" type="text/javascript"></script>
+        <script src="{{URL::to('/themes/js/bootstrap.min.js')}}" type="text/javascript"></script>
         <script src="{{URL::to('/themes/js/google-code-prettify/prettify.js')}}"></script>
         <script src="{{URL::to('themes/js/bootshop.js')}}"></script>
         <script src="{{URL::to('themes/js/jquery.lightbox-0.5.js')}}"></script>
