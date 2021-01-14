@@ -11,7 +11,7 @@
 
 
 
-        <title>@yield('title')</title>
+        <title>{{ config('app.name', 'Laravel') }}</title>
     <!-- Bootstrap style --> 
         <link id="callCss" rel="stylesheet" href="{{asset('themes/bootshop/bootstrap.min.css')}}" media="screen"/>
         <link href="{{asset('themes/css/base.css')}}" rel="stylesheet" media="screen"/>
@@ -59,7 +59,6 @@
 	    </div>
         
         @include('inc.footer')
-        
         <script src="{{URL::to('/themes/js/jquery.js')}}" type="text/javascript"></script>
         <script src="{{URL::to('/themes/js/bootstrap.min.js')}}" type="text/javascript"></script>
         <script src="{{URL::to('/themes/js/google-code-prettify/prettify.js')}}"></script>
