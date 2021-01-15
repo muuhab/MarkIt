@@ -15,9 +15,9 @@ use App\Http\Controllers\UserController;
 */
 
 Route::get('/', function () {
-    return view('products');
+    return view('welcome');
 });
-
+Route::get('/','ProductsController@index');
 Route::get('/search','ProductsController@search');
 Route::get('/signin','PagesController@signin')->name('signin');
 Auth::routes();

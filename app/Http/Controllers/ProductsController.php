@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Product;
+use Illuminate\Support\Facades\Auth;
+
 
 class ProductsController extends Controller
 {
@@ -18,8 +21,13 @@ class ProductsController extends Controller
 
     public function index()
     {
-        $posts = Products::all()->paginate(10);
-        return view('prodructs')->with('products',$products);
+        $products = Product::paginate(30);
+        if(Auth::check()){
+            $split=explode(" ",Auth::user()->name);
+            $name=$split[0];
+        }
+        
+        return view('products',['products'=>$products,'name'=>$name]);
 
     }
 
@@ -86,7 +94,7 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-        $products= Products::find($id);
+        $products= Product::find($id);
          
         
         return view('products_details')->with('products',$products);

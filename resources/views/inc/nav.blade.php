@@ -6,7 +6,7 @@
         <span class="icon-bar"></span>
     </a>
       <div class="navbar-inner">
-        <a class="brand" href="index.html"><img src="themes/images/logo.png" alt="Bootsshop"/></a>
+        <a class="brand" href="{{url('/')}}"><img src="themes/images/logo.png" alt="Bootsshop"/></a>
             <form class="form-inline navbar-search" method="post" action="products.html" >
             <input id="srchFld" class="srchTxt" type="text" />
               <select class="srchTxt">
@@ -20,13 +20,9 @@
               <button type="submit" id="submitButton" class="btn btn-primary">Go</button>
         </form>
         <ul id="topMenu" class="nav pull-right">
-         <li class=""><a href="special_offer.html">Specials Offer</a></li>
-         <li class=""><a href="normal.html">Delivery</a></li>
-         <li class=""><a href="contact.html">Contact</a></li>
          @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
-                                    {{-- <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a> --}}
                                     <a href="{{route('signin')}}"  style="padding-right:0"><span class="btn btn-large btn-success">Login</span></a>
                                 </li>
                             @endif
@@ -34,11 +30,9 @@
                            
                         @else
                             <li class="nav-item dropdown  ">
-                              {{-- <a href="{{route('signin')}}"  style="padding-right:0"><span class="btn btn-large btn-success">Login</span></a> --}}
                                 <a  href="{{route('home')}}"  >
                                   <span class="navbbar-brand">
-                                    {{ Auth::user()->name }}
-
+                                    {{$name}}
                                   </span>
                                   </a>
                                 </li>
