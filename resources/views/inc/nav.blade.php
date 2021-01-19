@@ -32,7 +32,7 @@
                             <li class="nav-item dropdown  ">
                                 <a  href="{{route('home')}}"  >
                                   <span class="navbbar-brand">
-                                    {{$name}}
+                                    {{ Auth::user()->name }}
                                   </span>
                                   </a>
                                 </li>

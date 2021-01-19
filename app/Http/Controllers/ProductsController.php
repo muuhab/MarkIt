@@ -22,12 +22,7 @@ class ProductsController extends Controller
     public function index()
     {
         $products = Product::paginate(30);
-        if(Auth::check()){
-            $split=explode(" ",Auth::user()->name);
-            $name=$split[0];
-        }
-        
-        return view('products',['products'=>$products,'name'=>$name]);
+        return view('products',['products'=>$products]);
 
     }
 
