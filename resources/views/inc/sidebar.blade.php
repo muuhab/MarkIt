@@ -1,42 +1,27 @@
-<!-- Sidebar ================================================== -->
-<div id="sidebar" class="span3">
-    <div class="well well-small"><a id="myCart" href="product_summary.html"><img src="themes/images/ico-cart.png" alt="cart">3 Items in your cart  <span class="badge badge-warning pull-right">$155.00</span></a></div>
-    <ul id="sideManu" class="nav nav-tabs nav-stacked">
-        <li class="subMenu open"><a> ELECTRONICS [230]</a>
-            <ul>
-            <li><a class="active" href="products.html"><i class="icon-chevron-right"></i>Cameras (100) </a></li>
-            <li><a href="products.html"><i class="icon-chevron-right"></i>Computers, Tablets & laptop (30)</a></li>
-            <li><a href="products.html"><i class="icon-chevron-right"></i>Mobile Phone (80)</a></li>
-            <li><a href="products.html"><i class="icon-chevron-right"></i>Sound & Vision (15)</a></li>
-            </ul>
-        </li>
-        <li class="subMenu"><a> CLOTHES [840] </a>
-        <ul style="display:none">
-            <li><a href="products.html"><i class="icon-chevron-right"></i>Women's Clothing (45)</a></li>
-            <li><a href="products.html"><i class="icon-chevron-right"></i>Women's Shoes (8)</a></li>												
-            <li><a href="products.html"><i class="icon-chevron-right"></i>Women's Hand Bags (5)</a></li>	
-            <li><a href="products.html"><i class="icon-chevron-right"></i>Men's Clothings  (45)</a></li>
-            <li><a href="products.html"><i class="icon-chevron-right"></i>Men's Shoes (6)</a></li>												
-            <li><a href="products.html"><i class="icon-chevron-right"></i>Kids Clothing (5)</a></li>												
-            <li><a href="products.html"><i class="icon-chevron-right"></i>Kids Shoes (3)</a></li>												
-        </ul>
-        </li>
-        <li class="subMenu"><a>FOOD AND BEVERAGES [1000]</a>
-            <ul style="display:none">
-            <li><a href="products.html"><i class="icon-chevron-right"></i>Angoves  (35)</a></li>
-            <li><a href="products.html"><i class="icon-chevron-right"></i>Bouchard Aine & Fils (8)</a></li>												
-            <li><a href="products.html"><i class="icon-chevron-right"></i>French Rabbit (5)</a></li>	
-            <li><a href="products.html"><i class="icon-chevron-right"></i>Louis Bernard  (45)</a></li>
-            <li><a href="products.html"><i class="icon-chevron-right"></i>BIB Wine (Bag in Box) (8)</a></li>												
-            <li><a href="products.html"><i class="icon-chevron-right"></i>Other Liquors & Wine (5)</a></li>												
-            <li><a href="products.html"><i class="icon-chevron-right"></i>Garden (3)</a></li>												
-            <li><a href="products.html"><i class="icon-chevron-right"></i>Khao Shong (11)</a></li>												
-        </ul>
-        </li>
-        <li><a href="products.html">HEALTH & BEAUTY [18]</a></li>
-        <li><a href="products.html">SPORTS & LEISURE [58]</a></li>
-        <li><a href="products.html">BOOKS & ENTERTAINMENTS [14]</a></li>
-    </ul>
-    <br/>
+<div class="flyout-w -fsh0 -fs0">
+    <div class="flyout" role="menu">
+        <a href="" class="itm" role="menuitem">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M21.779 8a11.484 11.484 0 0 0-3.055.534a14.566 14.566 0 0 1-1.822.413A6.005 6.005 0 0 0 11 4v2a3.993 3.993 0 0 1 3.827 2.9a20.115 20.115 0 0 1-1.617-.365A12.89 12.89 0 0 0 10.032 8C6.31 8 4 11.065 4 16c0 7.51 4.068 11.999 8 12h.002a7.158 7.158 0 0 0 2.49-.59A5.013 5.013 0 0 1 16 27a5.027 5.027 0 0 1 1.511.41A7.15 7.15 0 0 0 20 28c3.93-.001 8-4.49 8-12c0-3.69-1.63-8-6.221-8zM20 26a5.504 5.504 0 0 1-1.79-.464A6.417 6.417 0 0 0 16 25a6.404 6.404 0 0 0-2.206.536A5.534 5.534 0 0 1 12 26h.002C9.052 25.999 6 22.259 6 16c0-1.804.393-6 4.032-6a11.236 11.236 0 0 1 2.68.473a12.982 12.982 0 0 0 3.05.527h.491a11.796 11.796 0 0 0 2.996-.536a9.848 9.848 0 0 1 2.53-.464C25.796 10 26 14.998 26 16c0 6.259-3.052 9.999-6 10z" fill="#626262"/><path d="M18 7h-1V6a2.002 2.002 0 0 1 2-2h1v1a2.002 2.002 0 0 1-2 2z" fill="#626262"/></svg>
+            <span class="text">Supermarket</span>
+        </a>
+        <a href="" class="itm" role="menuitem">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 64 64"><path d="M61.598 16.767C57.86 9.318 55.339 5.168 54.104 4.433c-.977-.578-2.666-.74-5.817-.999c-2.359-.193-5.293-.434-6.608-.949L40.439 2l-.858 1.022c-.065.075-3.171 3.627-7.58 3.627c-4.437 0-7.554-3.591-7.585-3.628l-.863-1.011l-1.233.476c-1.315.516-4.248.756-6.606.948c-3.152.259-4.842.421-5.816.998c-1.239.736-3.76 4.886-7.496 12.335l-.402.8l.352.825c3.3 7.753 11.082 9.458 11.412 9.527l1.032.215l-1.054 28.042l-.043 1.152l.983.575c9.328 5.461 25.305 5.461 34.634 0l.983-.575l-.044-1.152l-1.054-28.042l1.032-.215c.33-.069 8.112-1.774 11.413-9.527l.354-.825l-.402-.8m-5.034 2.923c-2.139 2.742-4.77 4.259-7.835 4.523l-1.651-2.618l1.303 34.653c-9.059 5.303-23.703 5.304-32.763 0l1.302-34.653l-1.594 2.555c-3.063-.264-5.696-1.783-7.832-4.522a17.513 17.513 0 0 1-2.347-4.089l-.063.12c1.627-3.139 4.748-8.978 5.759-9.579c1.231-.73 7.502-.688 10.964-1.476a20.106 20.106 0 0 0 3.043 2.54a15.67 15.67 0 0 0 3.251 1.685c1.385.514 2.776.774 4.144.774h.04c1.655-.008 3.28-.395 4.832-1.155c1.713-.838 3.354-2.146 4.89-3.882c3.422.829 9.896.771 11.149 1.514c1.007.6 4.112 6.402 5.744 9.549a17.381 17.381 0 0 1-2.336 4.061" fill="#626262"/></svg>
+            <span class="text">Fashion</span>
+        </a>
+        <a href="" class="itm" role="menuitem">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M21.779 8a11.484 11.484 0 0 0-3.055.534a14.566 14.566 0 0 1-1.822.413A6.005 6.005 0 0 0 11 4v2a3.993 3.993 0 0 1 3.827 2.9a20.115 20.115 0 0 1-1.617-.365A12.89 12.89 0 0 0 10.032 8C6.31 8 4 11.065 4 16c0 7.51 4.068 11.999 8 12h.002a7.158 7.158 0 0 0 2.49-.59A5.013 5.013 0 0 1 16 27a5.027 5.027 0 0 1 1.511.41A7.15 7.15 0 0 0 20 28c3.93-.001 8-4.49 8-12c0-3.69-1.63-8-6.221-8zM20 26a5.504 5.504 0 0 1-1.79-.464A6.417 6.417 0 0 0 16 25a6.404 6.404 0 0 0-2.206.536A5.534 5.534 0 0 1 12 26h.002C9.052 25.999 6 22.259 6 16c0-1.804.393-6 4.032-6a11.236 11.236 0 0 1 2.68.473a12.982 12.982 0 0 0 3.05.527h.491a11.796 11.796 0 0 0 2.996-.536a9.848 9.848 0 0 1 2.53-.464C25.796 10 26 14.998 26 16c0 6.259-3.052 9.999-6 10z" fill="#626262"/><path d="M18 7h-1V6a2.002 2.002 0 0 1 2-2h1v1a2.002 2.002 0 0 1-2 2z" fill="#626262"/></svg>
+            <span class="text">Health & Beauty</span>
+        </a>
+        <a href="" class="itm" role="menuitem">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M21.779 8a11.484 11.484 0 0 0-3.055.534a14.566 14.566 0 0 1-1.822.413A6.005 6.005 0 0 0 11 4v2a3.993 3.993 0 0 1 3.827 2.9a20.115 20.115 0 0 1-1.617-.365A12.89 12.89 0 0 0 10.032 8C6.31 8 4 11.065 4 16c0 7.51 4.068 11.999 8 12h.002a7.158 7.158 0 0 0 2.49-.59A5.013 5.013 0 0 1 16 27a5.027 5.027 0 0 1 1.511.41A7.15 7.15 0 0 0 20 28c3.93-.001 8-4.49 8-12c0-3.69-1.63-8-6.221-8zM20 26a5.504 5.504 0 0 1-1.79-.464A6.417 6.417 0 0 0 16 25a6.404 6.404 0 0 0-2.206.536A5.534 5.534 0 0 1 12 26h.002C9.052 25.999 6 22.259 6 16c0-1.804.393-6 4.032-6a11.236 11.236 0 0 1 2.68.473a12.982 12.982 0 0 0 3.05.527h.491a11.796 11.796 0 0 0 2.996-.536a9.848 9.848 0 0 1 2.53-.464C25.796 10 26 14.998 26 16c0 6.259-3.052 9.999-6 10z" fill="#626262"/><path d="M18 7h-1V6a2.002 2.002 0 0 1 2-2h1v1a2.002 2.002 0 0 1-2 2z" fill="#626262"/></svg>
+            <span class="text">Phones & Tablets</span>
+        </a>
+        <a href="" class="itm" role="menuitem">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);" preserveAspectRatio="xMidYMid meet" viewBox="0 0 32 32"><path d="M21.779 8a11.484 11.484 0 0 0-3.055.534a14.566 14.566 0 0 1-1.822.413A6.005 6.005 0 0 0 11 4v2a3.993 3.993 0 0 1 3.827 2.9a20.115 20.115 0 0 1-1.617-.365A12.89 12.89 0 0 0 10.032 8C6.31 8 4 11.065 4 16c0 7.51 4.068 11.999 8 12h.002a7.158 7.158 0 0 0 2.49-.59A5.013 5.013 0 0 1 16 27a5.027 5.027 0 0 1 1.511.41A7.15 7.15 0 0 0 20 28c3.93-.001 8-4.49 8-12c0-3.69-1.63-8-6.221-8zM20 26a5.504 5.504 0 0 1-1.79-.464A6.417 6.417 0 0 0 16 25a6.404 6.404 0 0 0-2.206.536A5.534 5.534 0 0 1 12 26h.002C9.052 25.999 6 22.259 6 16c0-1.804.393-6 4.032-6a11.236 11.236 0 0 1 2.68.473a12.982 12.982 0 0 0 3.05.527h.491a11.796 11.796 0 0 0 2.996-.536a9.848 9.848 0 0 1 2.53-.464C25.796 10 26 14.998 26 16c0 6.259-3.052 9.999-6 10z" fill="#626262"/><path d="M18 7h-1V6a2.002 2.002 0 0 1 2-2h1v1a2.002 2.002 0 0 1-2 2z" fill="#626262"/></svg>
+            <span class="text">Electronics</span>
+        </a>
+
+
+
+    </div>
 </div>
-<!-- Sidebar end=============================================== -->

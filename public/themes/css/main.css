@@ -1,0 +1,58 @@
+body{
+    background: #F5F5F5;
+    color:#282828;
+}
+
+#mainBody { border-top:2px solid #dedede; padding-top: 18px;}
+
+.flyout-w, .flyout .itm {
+    width: 206px;
+    display: flex;
+}
+.flyout .text, .flyout{
+    overflow: hidden;
+}
+
+.flyout .text{
+    white-space: nowrap;
+}
+
+
+.-fsh0 {
+    flex-shrink: 0;
+}
+
+.flyout-w .flyout
+{
+    top: 0;
+    left: 0;
+    position: absolute;
+
+    z-index: 50;
+    font-size: .75rem;
+    height: 384px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.05);
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+.card, .flyout {
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.05);
+}
+
+
+
+#wrapper1:after {
+    content: "";
+    background-color: #EDEDED;
+    position: absolute;
+    width: 2px;
+    height: 340px;
+    top: 15px;
+    left: 93%;
+    display: block;
+  }
+
+
