@@ -10,7 +10,7 @@
 		<li><a href="index.html">Home</a> <span class="divider">/</span></li>
 		<li class="active">Products Name</li>
     </ul>
-	<h3> Products Name <small class="pull-right"> {{count($products)}} products are available </small></h3>	
+	<h3>  <small class="pull-right"> {{count($products)}} products are available </small></h3>	
 	<hr class="soft"/>
 	
 	{{-- <form class="form-horizontal span6">
@@ -31,66 +31,42 @@
 </div>
 <br class="clr"/>
 <div class="tab-content">
-	<div class="tab-pane" id="listView"> <!-------------- Start List View  ------------------------->
-		@foreach ($products as $product)
-			
-		<div class="row">	  
-			<div class="span2">
-				<img src="themes/images/products/3.jpg" alt=""/>
-			</div>
-			<div class="span4">
-				<h3>{{$product->name}}</h3>				
-				<hr class="soft"/>
-				<h5>Product Name </h5>
-				<p>
-					{{$product->about}}
-				</p>
-				<a class="btn btn-small pull-right" href="product_details.html">View Details</a>
-				<br class="clr"/>
-			</div>
-			<div class="span3 alignR">
-			<form class="form-horizontal qtyFrm">
-			<h3> ${{$product->price}}</h3>
-			<label class="checkbox">
-				<input type="checkbox">  Adds product to compair
-			</label><br/>
-			
-			  <a href="product_details.html" class="btn btn-large btn-primary"> Add to <i class=" icon-shopping-cart"></i></a>
-			  <a href="product_details.html" class="btn btn-large"><i class="icon-zoom-in"></i></a>
-			
-				</form>
-			</div>
-		</div>
-		@endforeach
-		
-		
-		
-	
-		
-	</div> <!-------------- End Block View  ------------------------->
-	
-	
-	<div class="tab-pane  active" id="blockView">  <!-------------- Start Block View  ------------------------->
-		<ul class="thumbnails">
-			@foreach ($products as $product)
-			<li class="span3">
-			  <div class="thumbnail">
-				<a href="product_details.html"><img src="themes/images/products/3.jpg" alt=""/></a>
-				<div class="caption">
-				  <h5>{{$product->name}}</h5>
-				  <p> 
-					{{$product->about}}
-				  </p>
-				   <h4 style="text-align:center"><a class="btn" href="product_details.html"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">&euro;{{$product->price}}</a></h4>
-				</div>
-			  </div>
-			</li>
-			
-			@endforeach
 
-		</ul>
-		<hr class="soft"/>
-	</div> <!-------------- End Block View  ------------------------->
+	  <!-------------- Start Block View  ------------------------->
+			<div class="row">
+				@foreach ($products as $product)
+				<div class="col-md-4">
+					<!-- bbb_deals -->
+					<div class="bbb_deals">
+						<div class="ribbon ribbon-top-right"><span>60% OFF</span></div>
+						<div class="bbb_deals_title">Today's Best Offer</div>
+						<div class="bbb_deals_slider_container">
+							<div class=" bbb_deals_item">
+								<div class="bbb_deals_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1562074043/234.png" alt=""></div>
+								<div class="bbb_deals_content">
+									<div class="bbb_deals_info_line d-flex flex-row justify-content-start">
+										<div class="bbb_deals_item_category"><a href="#">Laptops</a></div>
+										<div class="bbb_deals_item_price_a ml-auto">{{$product->price}}</div>
+									</div>
+									<div class="bbb_deals_info_line d-flex flex-row justify-content-start">
+										<div class="bbb_deals_item_name">{{$product->name}}</div>
+										<div class="bbb_deals_item_price ml-auto">{{$product->price}} $</div>
+									</div>
+									<div class="available">
+										<div class="available_line d-flex flex-row justify-content-start">
+											<div class="available_title">Available: <span>6</span></div>
+											<div class="sold_title ml-auto">Already sold: <span>28</span></div>
+										</div>
+										<div class="available_bar"><span style="width:17%"></span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				@endforeach
+			</div>
+	 <!-------------- End Block View  ------------------------->
 </div>
 
 	{{-- <a href="compair.html" class="btn btn-large pull-right">Compair Product</a> --}}
