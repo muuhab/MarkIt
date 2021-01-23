@@ -42,8 +42,8 @@
 
 
     <div class="collapse navbar-collapse">
-      <form class="form-inline my-2 my-lg-0 mx-auto">
-        <input class="form-control" type="search" placeholder="Search for products..." aria-label="Search">
+      <form class="form-inline my-2 my-lg-0 mx-auto" method="GET" action="{{route('search')}} ">
+        <input class="form-control" type="search" placeholder="Search for products..." aria-label="Search" name="search">
         <button class="navbar-button  col-xs-1"><i class="fas fa-search"></i></button>
       </form>
 

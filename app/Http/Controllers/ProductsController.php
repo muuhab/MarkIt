@@ -16,7 +16,7 @@ class ProductsController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth',['except'=>['index','show']]);
+        $this->middleware('auth',['except'=>['index','show','search']]);
     }
 
     public function index()
@@ -38,9 +38,8 @@ class ProductsController extends Controller
  
     public function search(Request $request)
     {
-
         $search=$request->get('search');
-        $products=Product::where('title','like','%'.$search.'%')->paginate();
+        $products=Product::where('name','like','%'.$search.'%')->paginate();
         return view('products')->with('products',$products);
 
     }

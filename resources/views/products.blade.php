@@ -23,7 +23,6 @@
 
 	  <!-------------- Start Block View  ------------------------->
 			<div class="row">
-				@if (count($products) > 0 )
 				@foreach ($products as $product)
 				<div class="col-md-4">
 					<!-- bbb_deals -->
@@ -55,9 +54,6 @@
 					</div>
 				</div>
 				@endforeach
-				@else 
-				<p>no posts found</p>
-			@endif
 			</div>
 	 <!-------------- End Block View  ------------------------->
 </div>
