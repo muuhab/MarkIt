@@ -92,7 +92,7 @@ class ProductsController extends Controller
         $products= Product::find($id);
          
         
-        return view('products_details')->with('products',$products);
+        return view('product_details')->with('products',$products);
     
     }
 

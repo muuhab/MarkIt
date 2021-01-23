@@ -13,18 +13,7 @@
 	<h3>  <small class="pull-right"> {{count($products)}} products are available </small></h3>	
 	<hr class="soft"/>
 	
-	{{-- <form class="form-horizontal span6">
-		<div class="control-group">
-		  <label class="control-label alignL">Sort By </label>
-			<select>
-              <option>Priduct name A - Z</option>
-              <option>Priduct name Z - A</option>
-              <option>Priduct Stoke</option>
-              <option>Price Lowest first</option>
-            </select>
-		</div>
-	  </form> --}}
-	  
+
 <div id="myTab" class="pull-right">
  <a href="#listView" data-toggle="tab"><span class="btn btn-large"><i class="icon-list"></i></span></a>
  <a href="#blockView" data-toggle="tab"><span class="btn btn-large "><i class="icon-th-large"></i></span></a>
@@ -34,6 +23,7 @@
 
 	  <!-------------- Start Block View  ------------------------->
 			<div class="row">
+				@if (count($products) > 0 )
 				@foreach ($products as $product)
 				<div class="col-md-4">
 					<!-- bbb_deals -->
@@ -42,7 +32,7 @@
 						<div class="bbb_deals_title">Today's Best Offer</div>
 						<div class="bbb_deals_slider_container">
 							<div class=" bbb_deals_item">
-								<div class="bbb_deals_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1562074043/234.png" alt=""></div>
+								<a href="{{ route('products.show',['product'=>$product->id])   }}"><div class="bbb_deals_image"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1562074043/234.png" alt=""></div></a>
 								<div class="bbb_deals_content">
 									<div class="bbb_deals_info_line d-flex flex-row justify-content-start">
 										<div class="bbb_deals_item_category"><a href="#">Laptops</a></div>
@@ -65,6 +55,9 @@
 					</div>
 				</div>
 				@endforeach
+				@else 
+				<p>no posts found</p>
+			@endif
 			</div>
 	 <!-------------- End Block View  ------------------------->
 </div>

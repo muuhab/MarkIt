@@ -17,7 +17,7 @@ use App\Http\Controllers\UserController;
 //Route::get('/', function () {
  //   return view('welcome');
 //});
-Route::get('/','ProductsController@index');
+Route::get('/','ProductsController@index')->name('home');
 Route::get('/search','ProductsController@search');
 Route::get('/signin','PagesController@signin')->name('signin');
 Auth::routes();
@@ -25,7 +25,7 @@ Route::resource('products','ProductsController');
 
 
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
 

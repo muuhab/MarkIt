@@ -20,6 +20,7 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/products.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/product_details.css') }}" rel="stylesheet">
     
     <link href="{{ asset('themes/css/nav.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('themes/css/main.css') }}" rel="stylesheet" type="text/css">

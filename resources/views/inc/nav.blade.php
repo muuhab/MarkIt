@@ -26,7 +26,7 @@
                 <i class="bx bx-menu icon-single"></i>
             </button>
 
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="{{route('home')}}">
       <h4 class="font-weight-bold">E-Commerce</h4>
     </a>
 
