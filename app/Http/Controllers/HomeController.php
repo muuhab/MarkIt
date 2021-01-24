@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Product;
 class HomeController extends Controller
@@ -21,9 +21,10 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function dashBoard()
     {
-        $products = Product::paginate(30);
-        return view('products',['products'=>$products]);
+        // dd(Auth::user()->id);
+        $products = Product::where('user_id',Auth::user()->id)->paginate(30);
+        return view('Dashboard',['products'=>$products]);
     }
 }
