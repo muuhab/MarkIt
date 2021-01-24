@@ -21,7 +21,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/products.css') }}" rel="stylesheet">
     <link href="{{ asset('css/product_details.css') }}" rel="stylesheet">
-    
+
     <link href="{{ asset('themes/css/nav.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('themes/css/main.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('themes/css/footer.css') }}" rel="stylesheet" type="text/css">
@@ -39,11 +39,15 @@
                         @include('inc.sidebar')
                     </div>
 
-                    <div class="col-1"  ></div>
+                    <div class="col-1" style=" max-width:50px;" ></div>
+
 
                     <div class="col-9"  >
-                        @yield('content')
+                        <div style=" min-height: 384px;  ">
+                             @yield('content')
+                        </div>
                     </div>
+
 
                 </div>
 	        </div>

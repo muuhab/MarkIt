@@ -1,7 +1,7 @@
 
     <!----------- Footer ------------>
     <footer class="footer-bs text-light">
-        <div class="container">
+        <div class="container ">
         <div class="row">
         	<div class="col-6 footer-brand animated fadeInLeft">
             	<h2>ABOUT</h2>
@@ -37,7 +37,7 @@
 
 
 
-            <hr>
+            <hr class="footer-hr">
 
 
 

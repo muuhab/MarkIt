@@ -1,23 +1,27 @@
 @extends('layouts.master')
 @section('content')
-  
-	<div class="span9">
+
+<div class="span9">
     <ul class="breadcrumb">
     <li><a href="index.html">Home</a> <span class="divider">/</span></li>
     <li><a href="products.html">Products</a> <span class="divider">/</span></li>
+    <li><a href="products.html">Category</a> <span class="divider">/</span></li>
     <li class="active">product Details</li>
-	</ul>
+    </ul>
+<div class="row flyout " style=" background-color: #fff; border-radius: 4px; " >
+
 	<!--Section: Block Content-->
-	<div class="card">
+
+
 		<div class="container-fliud">
 			<div class="wrapper row">
 				<div class="preview col-md-6">
-					
+
 					<div class="preview-pic tab-content">
 					  <div class="tab-pane active" id="pic-1"><img src="https://res.cloudinary.com/dxfq3iotg/image/upload/v1562074043/234.png" /></div>
 					</div>
-					
-					
+
+
 				</div>
 				<div class="details col-md-6">
 					<h3 class="product-title">{{$products->name}}</h3>
@@ -52,10 +56,11 @@
 				</div>
 			</div>
 		</div>
-	</div>
+    </div>
+
   <!--Section: Block Content-->
-	{{-- 	
-	<div class="row">	  
+	{{--
+	<div class="row">
 			<div id="gallery" class="span3">
             <a href="themes/images/products/large/f1.jpg" title="Fujifilm FinePix S2950 Digital Camera">
 				<img src="themes/images/products/large/3.jpg" style="width:100%" alt="Fujifilm FinePix S2950 Digital Camera"/>
@@ -73,12 +78,12 @@
                    <a href="themes/images/products/large/f2.jpg"> <img style="width:29%" src="themes/images/products/large/f2.jpg" alt=""/></a>
                   </div>
                 </div>
-              <!--  
+              <!--
 			  <a class="left carousel-control" href="#myCarousel" data-slide="prev">‹</a>
-              <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a> 
+              <a class="right carousel-control" href="#myCarousel" data-slide="next">›</a>
 			  -->
               </div>
-			  
+
 			 <div class="btn-toolbar">
 			  <div class="btn-group">
 				<span class="btn"><i class="icon-envelope"></i></span>
@@ -103,7 +108,7 @@
 					</div>
 				  </div>
 				</form>
-				
+
 				<hr class="soft"/>
 				<h4>100 items in stock</h4>
 				<form class="form-horizontal qtyFrm pull-right">
@@ -121,17 +126,17 @@
 				</form>
 				<hr class="soft clr"/>
 				<p>
-				14 Megapixels. 18.0 x Optical Zoom. 3.0-inch LCD Screen. Full HD photos and 1280 x 720p HD movie capture. ISO sensitivity ISO6400 at reduced resolution. 
-				Tracking Auto Focus. Motion Panorama Mode. Face Detection technology with Blink detection and Smile and shoot mode. 4 x AA batteries not included. WxDxH 110.2 ×81.4x73.4mm. 
+				14 Megapixels. 18.0 x Optical Zoom. 3.0-inch LCD Screen. Full HD photos and 1280 x 720p HD movie capture. ISO sensitivity ISO6400 at reduced resolution.
+				Tracking Auto Focus. Motion Panorama Mode. Face Detection technology with Blink detection and Smile and shoot mode. 4 x AA batteries not included. WxDxH 110.2 ×81.4x73.4mm.
 				Weight 0.341kg (excluding battery and memory card). Weight 0.437kg (including battery and memory card).
-				
+
 				</p>
 				<a class="btn btn-small pull-right" href="#detail">More Details</a>
 				<br class="clr"/>
 			<a href="#" name="detail"></a>
 			<hr class="soft"/>
 			</div>
-			
+
 			<div class="span9">
             <ul id="productDetail" class="nav nav-tabs">
               <li class="active"><a href="#home" data-toggle="tab">Product Details</a></li>
@@ -150,7 +155,7 @@
 				<tr class="techSpecRow"><td class="techSpecTD1">Display size:</td><td class="techSpecTD2">3</td></tr>
 				</tbody>
 				</table>
-				
+
 				<h5>Features</h5>
 				<p>
 				14 Megapixels. 18.0 x Optical Zoom. 3.0-inch LCD Screen. Full HD photos and 1280 x 720p HD movie capture. ISO sensitivity ISO6400 at reduced resolution. Tracking Auto Focus. Motion Panorama Mode. Face Detection technology with Blink detection and Smile and shoot mode. 4 x AA batteries not included. WxDxH 110.2 ×81.4x73.4mm. Weight 0.341kg (excluding battery and memory card). Weight 0.437kg (including battery and memory card).<br/>
@@ -186,16 +191,16 @@
 		<hr class="soft"/>
 		<div class="tab-content">
 			<div class="tab-pane" id="listView">
-				<div class="row">	  
+				<div class="row">
 					<div class="span2">
 						<img src="themes/images/products/4.jpg" alt=""/>
 					</div>
 					<div class="span4">
-						<h3>New | Available</h3>				
+						<h3>New | Available</h3>
 						<hr class="soft"/>
 						<h5>Product Name </h5>
 						<p>
-						Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
+						Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies -
 						that is why our goods are so popular..
 						</p>
 						<a class="btn btn-small pull-right" href="product_details.html">View Details</a>
@@ -215,16 +220,16 @@
 					</div>
 			</div>
 			<hr class="soft"/>
-			<div class="row">	  
+			<div class="row">
 					<div class="span2">
 						<img src="themes/images/products/5.jpg" alt=""/>
 					</div>
 					<div class="span4">
-						<h3>New | Available</h3>				
+						<h3>New | Available</h3>
 						<hr class="soft"/>
 						<h5>Product Name </h5>
 						<p>
-						Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
+						Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies -
 						that is why our goods are so popular..
 						</p>
 						<a class="btn btn-small pull-right" href="product_details.html">View Details</a>
@@ -244,16 +249,16 @@
 					</div>
 			</div>
 			<hr class="soft"/>
-			<div class="row">	  
+			<div class="row">
 					<div class="span2">
 					<img src="themes/images/products/6.jpg" alt=""/>
 					</div>
 					<div class="span4">
-						<h3>New | Available</h3>				
+						<h3>New | Available</h3>
 						<hr class="soft"/>
 						<h5>Product Name </h5>
 						<p>
-						Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
+						Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies -
 						that is why our goods are so popular..
 						</p>
 						<a class="btn btn-small pull-right" href="product_details.html">View Details</a>
@@ -273,16 +278,16 @@
 					</div>
 			</div>
 			<hr class="soft"/>
-			<div class="row">	  
+			<div class="row">
 					<div class="span2">
 					<img src="themes/images/products/7.jpg" alt=""/>
 					</div>
 					<div class="span4">
-						<h3>New | Available</h3>				
+						<h3>New | Available</h3>
 						<hr class="soft"/>
 						<h5>Product Name </h5>
 						<p>
-						Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
+						Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies -
 						that is why our goods are so popular..
 						</p>
 						<a class="btn btn-small pull-right" href="product_details.html">View Details</a>
@@ -301,18 +306,18 @@
 						</form>
 					</div>
 			</div>
-			
+
 			<hr class="soft"/>
-			<div class="row">	  
+			<div class="row">
 					<div class="span2">
 					<img src="themes/images/products/8.jpg" alt=""/>
 					</div>
 					<div class="span4">
-						<h3>New | Available</h3>				
+						<h3>New | Available</h3>
 						<hr class="soft"/>
 						<h5>Product Name </h5>
 						<p>
-						Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
+						Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies -
 						that is why our goods are so popular..
 						</p>
 						<a class="btn btn-small pull-right" href="product_details.html">View Details</a>
@@ -332,16 +337,16 @@
 					</div>
 			</div>
 			<hr class="soft"/>
-				<div class="row">	  
+				<div class="row">
 					<div class="span2">
 					<img src="themes/images/products/9.jpg" alt=""/>
 					</div>
 					<div class="span4">
-						<h3>New | Available</h3>				
+						<h3>New | Available</h3>
 						<hr class="soft"/>
 						<h5>Product Name </h5>
 						<p>
-						Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies - 
+						Nowadays the lingerie industry is one of the most successful business spheres.We always stay in touch with the latest fashion tendencies -
 						that is why our goods are so popular..
 						</p>
 						<a class="btn btn-small pull-right" href="product_details.html">View Details</a>
@@ -369,8 +374,8 @@
 						<a href="product_details.html"><img src="themes/images/products/10.jpg" alt=""/></a>
 						<div class="caption">
 						  <h5>Manicure &amp; Pedicure</h5>
-						  <p> 
-							Lorem Ipsum is simply dummy text. 
+						  <p>
+							Lorem Ipsum is simply dummy text.
 						  </p>
 						  <h4 style="text-align:center"><a class="btn" href="product_details.html"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">&euro;222.00</a></h4>
 						</div>
@@ -381,8 +386,8 @@
 						<a href="product_details.html"><img src="themes/images/products/11.jpg" alt=""/></a>
 						<div class="caption">
 						  <h5>Manicure &amp; Pedicure</h5>
-						  <p> 
-							Lorem Ipsum is simply dummy text. 
+						  <p>
+							Lorem Ipsum is simply dummy text.
 						  </p>
 						  <h4 style="text-align:center"><a class="btn" href="product_details.html"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">&euro;222.00</a></h4>
 						</div>
@@ -393,8 +398,8 @@
 						<a href="product_details.html"><img src="themes/images/products/12.jpg" alt=""/></a>
 						<div class="caption">
 						  <h5>Manicure &amp; Pedicure</h5>
-						  <p> 
-							Lorem Ipsum is simply dummy text. 
+						  <p>
+							Lorem Ipsum is simply dummy text.
 						  </p>
 						   <h4 style="text-align:center"><a class="btn" href="product_details.html"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">&euro;222.00</a></h4>
 						</div>
@@ -405,8 +410,8 @@
 						<a href="product_details.html"><img src="themes/images/products/13.jpg" alt=""/></a>
 						<div class="caption">
 						  <h5>Manicure &amp; Pedicure</h5>
-						  <p> 
-							Lorem Ipsum is simply dummy text. 
+						  <p>
+							Lorem Ipsum is simply dummy text.
 						  </p>
 						   <h4 style="text-align:center"><a class="btn" href="product_details.html"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">&euro;222.00</a></h4>
 						</div>
@@ -417,8 +422,8 @@
 						<a href="product_details.html"><img src="themes/images/products/1.jpg" alt=""/></a>
 						<div class="caption">
 						  <h5>Manicure &amp; Pedicure</h5>
-						  <p> 
-							Lorem Ipsum is simply dummy text. 
+						  <p>
+							Lorem Ipsum is simply dummy text.
 						  </p>
 						   <h4 style="text-align:center"><a class="btn" href="product_details.html"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">&euro;222.00</a></h4>
 						</div>
@@ -429,8 +434,8 @@
 						<a href="product_details.html"><img src="themes/images/products/2.jpg" alt=""/></a>
 						<div class="caption">
 						  <h5>Manicure &amp; Pedicure</h5>
-						  <p> 
-							Lorem Ipsum is simply dummy text. 
+						  <p>
+							Lorem Ipsum is simply dummy text.
 						  </p>
 						   <h4 style="text-align:center"><a class="btn" href="product_details.html"> <i class="icon-zoom-in"></i></a> <a class="btn" href="#">Add to <i class="icon-shopping-cart"></i></a> <a class="btn btn-primary" href="#">&euro;222.00</a></h4>
 						</div>
@@ -450,4 +455,5 @@
 </div> </div>
 </div>
 <!-- MainBody End ============================= --> --}}
-@endsection 
+@endsection
+

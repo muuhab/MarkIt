@@ -2,7 +2,7 @@
 @section('content')
 
 
-	<div class="row flyout" style=" height: 384px; background-color: #fff; border-radius: 4px; " >
+	<div class="row flyout" style=" background-color: #fff; border-radius: 4px; min-height: 384px; " >
 
         <div class="col-6 text-center " id="wrapper1" >
 

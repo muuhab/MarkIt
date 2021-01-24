@@ -1,7 +1,7 @@
 .footer-bs {
     background-color: #26272B;
     margin-top: 10%;
-	padding: 60px 40px;
+	padding: 60px 40px  ;
 	color: rgba(255,255,255,1.00);
 	border-top-left-radius: 5px;
 	border-top-right-radius: 5px;
@@ -47,7 +47,7 @@
 }
 .footer-bs .footer-ns p { font-size:12px; color:rgba(255,255,255,0.70); }
 
-hr{
+.footer-hr{
     border: 0;
   clear:both;
   display:block;
@@ -56,8 +56,11 @@ hr{
   height: 1px;
 }
 
-.footer-social-links{
-    margin-right: 0px;
+.footer-social-links {
+    position: relative;
+
+    left: 590px;
+
 }
 
 .footer-social-links li{
