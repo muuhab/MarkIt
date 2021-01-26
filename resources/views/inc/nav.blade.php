@@ -32,14 +32,6 @@
 
 
 
-    <ul class="navbar-nav ml-auto d-block d-md-none">
-      <li class="nav-item">
-        <a class="btn btn-link" href="#"><i class="fas fa-shopping-cart"></i><span class="badge badge-danger">3</span></a>
-      </li>
-    </ul>
-
-
-
 
     <div class="collapse navbar-collapse">
       <form class="form-inline my-2 my-lg-0 mx-auto" method="GET" action="{{route('search')}} ">
@@ -53,7 +45,7 @@
 
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="btn btn-link" href="#">
+          <a class="btn btn-link" href="cart">
             <i class="fas fa-shopping-cart pl-0"></i>
             <span class="badge badge-danger">3</span>
         </a>
@@ -75,7 +67,7 @@
             </a>
 
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a href="{{route('dashboard')}}" class="dropdown-item">Dashboard</a>
+                <a href="/home" class="dropdown-item">Dashboard</a>
                 <a class="dropdown-item" href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">

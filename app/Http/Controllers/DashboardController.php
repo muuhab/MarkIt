@@ -21,7 +21,7 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function dashBoard()
+    public function index()
     {
         // dd(Auth::user()->id);
         $products = Product::where('user_id',Auth::user()->id)->paginate(30);

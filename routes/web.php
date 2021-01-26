@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\UserController;
 
 /*
@@ -17,15 +18,14 @@ use App\Http\Controllers\UserController;
 //Route::get('/', function () {
  //   return view('welcome');
 //});
+
 Route::get('/','ProductsController@index')->name('home');
 Route::get('/search','ProductsController@search')->name('search');
-Route::get('/signin','PagesController@signin')->name('signin');
+Route::get('/cat/{cat}','ProductsController@cat')->name('cat');
+Route::get('/signin', function () {
+        return view('login');
+    })->name('signin');
 Auth::routes();
 Route::resource('products','ProductsController');
-
-
-
-Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'dashboard'])->name('dashboard');
-
-
-
+Route::resource('cart','CartController');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');

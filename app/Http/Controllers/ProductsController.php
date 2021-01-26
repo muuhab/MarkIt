@@ -22,7 +22,8 @@ class ProductsController extends Controller
     public function index()
     {
         $products = Product::paginate(30);
-        return view('dashboard',['products'=>$products]);
+        return view('products',['products'=>$products]);
+
 
     }
 
@@ -33,14 +34,22 @@ class ProductsController extends Controller
      */
     public function create()
     {
-        
+
     }
- 
+
     public function search(Request $request)
     {
         $search=$request->get('search');
         $products=Product::where('name','like','%'.$search.'%')->paginate();
         return view('products')->with('products',$products);
+
+    }
+
+    public function cat( $cat)
+    {
+
+       $products=Product::where('cat','=',$cat)->paginate(30);
+       return view('products')->with('products',$products);
 
     }
 
@@ -65,7 +74,7 @@ class ProductsController extends Controller
                 $extension=$request->file('product_image')->getClientOriginalExtension();
                 $fileNameToStore=$filename.'_'.time().'.'.$extension;
                 $path=$request->file('product_image')->storeAs('public/product_images',$fileNameToStore);
-            }else{ 
+            }else{
                 $fileNameToStore='noimage.jpg';
             }
             $product= new Product;
@@ -77,7 +86,7 @@ class ProductsController extends Controller
 
             $product->save();
             return redirect('/');
-            
+
     }
 
     /**
@@ -89,10 +98,10 @@ class ProductsController extends Controller
     public function show($id)
     {
         $products= Product::find($id);
-         
-        
+
+
         return view('product_details')->with('products',$products);
-    
+
     }
 
     /**
@@ -103,7 +112,7 @@ class ProductsController extends Controller
      */
     public function edit($id)
     {
-        $product= Product::find($id); 
+        $product= Product::find($id);
 
 
         if(auth()->user()->id !==$product->user_id){
@@ -141,13 +150,13 @@ class ProductsController extends Controller
             // $product->category_id=$request->input('category_id');
             if($request->hasFile('product_image')){
                 if ($product->product_image != 'noimage.jpg') {
-                    Storage::delete('public/product_images/'.$product->product_image);
+                  //  Storage::delete('public/product_images/'.$product->product_image);
                 }
                 $product->product_image=$fileNameToStore;
             }
             $product->save();
             return redirect('/');
-    
+
     }
 
     /**
@@ -165,7 +174,7 @@ class ProductsController extends Controller
 
         }
         if ($product->cover_image != 'noimage.jpg') {
-            Storage::delete('public/product_images/'.$product->product_image);
+          //  Storage::delete('public/product_images/'.$product->product_image);
         }
 
         $product->delete();

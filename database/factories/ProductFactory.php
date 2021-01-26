@@ -27,9 +27,9 @@ class ProductFactory extends Factory
         return [
             'name' => $this->faker->name,
             'about' => $this->faker->sentence,
-            'user_id' => User::factory(),
-            'price' => $this->faker->text,
-            'product_image' => "themes/images/products/3.jpg",
+            'price' => $this->faker->numberBetween($min = 1000, $max = 9000),
+            'product_image' => $this->faker->imageUrl(),
+            'cat' => $this->faker-> randomElement(['Supermarket', 'Fashion', 'Health & Beauty', 'Phones & Tablets', 'Home & Office', 'Books', 'Electronics']),
         ];
     }
 }

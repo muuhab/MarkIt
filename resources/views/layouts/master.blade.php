@@ -32,25 +32,28 @@
 
         @include('inc.nav')
         <div id="mainBody">
-            <div class="container"  >
-                <div class="row"  >
+                <div class="row  " >
 
-                    <div class="col-2"  >
+                    <div class="col-1" style=" max-width:50px;" ></div>
+
+                    <div class="col-2"  style="margin-left: 5px;" >
                         @include('inc.sidebar')
                     </div>
 
                     <div class="col-1" style=" max-width:50px;" ></div>
 
 
-                    <div class="col-9"  >
-                        <div style=" min-height: 384px;  ">
+                    <div class="col-8" style=" min-height: 384px;"  >
+
                              @yield('content')
-                        </div>
+
                     </div>
+
+                    <div class="col-2" ></div>
 
 
                 </div>
-	        </div>
+
         </div>
             @include('inc.footer')
         <script src="{{URL::to('/themes/js/jquery.js')}}" type="text/javascript"></script>
