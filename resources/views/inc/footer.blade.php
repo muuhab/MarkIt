@@ -5,7 +5,7 @@
         <div class="row">
         	<div class="col-6 footer-brand animated fadeInLeft">
             	<h2>ABOUT</h2>
-                <p>Suspendisse hendrerit tellus laoreet luctus pharetra. Aliquam porttitor vitae orci nec ultricies. Curabitur vehicula, libero eget faucibus faucibus, purus erat eleifend enim, porta pellentesque ex mi ut sem. Suspendisse hendrerit tellus laoreet luctus pharetraSuspendisse hendrerit tellus laoreet luctus pharetraSuspendisse hendrerit tellus laoreet luctus pharetraSuspendisse hendrerit tellus laoreet luctus pharetraSuspendisse hendrerit tellus laoreet luctus pharetraSuspendisse hendrerit tellus laoreet luctus pharetraSuspendisse hendrerit tellus laoreet luctus pharetra.Suspendisse hendrerit tellus laoreet luctus pharetra.Suspendisse hendrerit tellus laoreet luctus pharetra.</p>
+                <p>This is E-commerce Project!.Suspendisse hendrerit tellus laoreet luctus pharetra. Aliquam porttitor vitae orci nec ultricies. Curabitur vehicula, libero eget faucibus faucibus, purus erat eleifend enim, porta pellentesque ex mi ut sem. Suspendisse hendrerit tellus laoreet luctus pharetraSuspendisse hendrerit tellus laoreet luctus pharetraSuspendisse hendrerit tellus laoreet luctus pharetraSuspendisse hendrerit tellus laoreet luctus pharetraSuspendisse hendrerit tellus laoreet luctus pharetraSuspendisse hendrerit tellus laoreet luctus pharetraSuspendisse hendrerit tellus laoreet luctus pharetra.Suspendisse hendrerit tellus laoreet luctus pharetra.Suspendisse hendrerit tellus laoreet luctus pharetra.</p>
             </div>
 
         	<div class="col-3 footer-nav animated fadeInUp">
