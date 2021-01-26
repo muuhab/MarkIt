@@ -4,8 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
-use App\Models\Cart;
 use App\Models\Product;
+use App\Models\Cart;
+
 
 
 class CartController extends Controller
@@ -18,14 +19,21 @@ class CartController extends Controller
     public function index()
     {
 
-       // $products=Product::where('cat','=',$cat)->paginate(30);
-        // $orders = cart::where('user_id','=', auth()->user()->id)->paginate(30);
+        // All orders of the auth user
+     //   $orders = Cart::where('user_id','=', auth()->user()->id)->paginate(30);
 
-        //$orders = auth()->user()->cart->load('element');
-        //$items =auth()->user()->items;
+        $orders = auth()->user()->cart->load('element');
 
-      #return view('pages.cart')-> with ('carts', $carts);
-      return view('cart');
+        $items =auth()->user()->Product;
+
+        //$items = Product::where('id','=',$orders->item_id);
+
+
+    // return view('cart', ['items'=>$items , 'orders'=>$orders ]);
+
+     foreach($items as $item)
+     echo $item;
+
 
     }
 
