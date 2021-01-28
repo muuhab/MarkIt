@@ -27,5 +27,6 @@ Route::get('/signin', function () {
     })->name('signin');
 Auth::routes();
 Route::resource('products','ProductsController');
+Route::post('/cart/UpdateQty','CartController@updateqty')->name('UpdateQty');
 Route::resource('cart','CartController');
 Route::get('/dashboard', 'DashboardController@index')->name('dashboard');

@@ -50,10 +50,10 @@ class User extends Authenticatable
                 return $this->hasMany(cart::class,'id');
         }
 
+        // not important here
         public function products()
         {
-
-            return $this->hasMany('App\Product');
+            return $this->belongsToMany('App\Models\Product');
         }
 
 

@@ -20,19 +20,12 @@ class CartController extends Controller
     {
 
         // All orders of the auth user
-     //   $orders = Cart::where('user_id','=', auth()->user()->id)->paginate(30);
+        $orders = Cart::where('user_id','=', auth()->user()->id)->paginate(30);
 
-        $orders = auth()->user()->cart->load('element');
+                return view('cart')->with('orders',$orders);
 
-        $items =auth()->user()->Product;
-
-        //$items = Product::where('id','=',$orders->item_id);
-
-
-    // return view('cart', ['items'=>$items , 'orders'=>$orders ]);
-
-     foreach($items as $item)
-     echo $item;
+    //   foreach($orders as $order)
+    //      echo $order->products->name . '<br>' ;
 
 
     }
@@ -62,7 +55,7 @@ class CartController extends Controller
         $cart->user_id = $request->user_id;
         $cart->save();
 
-        return redirect('/')->with('success','Added to Cart');
+        return redirect('/');
     }
 
     /**
@@ -96,7 +89,7 @@ class CartController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
     }
 
     /**
@@ -107,6 +100,20 @@ class CartController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $order = Cart::find($id);
+        $order -> delete();
+        return redirect('/cart');
+
+          //get the event
+       //   $event = Events::find($id);
+
+       //   $event -> delete();
+        // return redirect('/events')->with('success','Event is Deleted');
     }
+
+    public function updateqty(Request $request)
+    {
+        echo "ho";
+    }
+
 }
