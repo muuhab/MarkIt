@@ -44,13 +44,15 @@
 
 
       <ul class="navbar-nav">
+
+        @if(!Auth::guest())
         <li class="nav-item">
           <a class="btn btn-link" href="{{route('cart.index')}}">
             <i class="fas fa-shopping-cart pl-0"></i>
             <span class="badge badge-danger">3</span>
         </a>
         </li>
-
+        @endif
 
 
         @guest

@@ -19,13 +19,11 @@ class CartController extends Controller
     public function index()
     {
 
+
         // All orders of the auth user
         $orders = Cart::where('user_id','=', auth()->user()->id)->paginate(30);
 
                 return view('cart')->with('orders',$orders);
-
-    //   foreach($orders as $order)
-    //      echo $order->products->name . '<br>' ;
 
 
     }
@@ -48,14 +46,41 @@ class CartController extends Controller
      */
     public function store(Request $request)
     {
-        $cart = new Cart;
 
+       // $article = $request->isMethod('put') ? Articles::findOrFail($request->article_id) : new Articles;
+
+
+       if(Cart::where('user_id','=',$request->user_id)->where('item_id', '=', $request->item_id)->count() > 0)
+       {
+
+           $cart = Cart::where('user_id','=',$request->user_id)->where('item_id', '=', $request->item_id)->first();
+
+           $itemPrice = Product::find($request->item_id)->price;
+
+
+           $cart->quantity = $cart->quantity + 1;
+           $cart->price = $itemPrice * $cart->quantity;
+           $cart->save();
+
+            return redirect()->back();
+
+       }
+
+       else
+       {
+
+        $cart = new Cart;
+        $itemPrice = Product::find($request->item_id)->price;
         // Store in DB
         $cart->item_id = $request->item_id;
         $cart->user_id = $request->user_id;
+        $cart->price = $itemPrice;
         $cart->save();
 
-        return redirect('/');
+        return redirect()->back();
+       }
+
+
     }
 
     /**
@@ -101,19 +126,22 @@ class CartController extends Controller
     public function destroy($id)
     {
         $order = Cart::find($id);
-        $order -> delete();
+        $order->delete();
         return redirect('/cart');
 
-          //get the event
-       //   $event = Events::find($id);
 
-       //   $event -> delete();
-        // return redirect('/events')->with('success','Event is Deleted');
     }
 
     public function updateqty(Request $request)
     {
-        echo "ho";
+        $id = $request->id;
+        $cart = Cart::find($id);
+        $cart->quantity = $request->quantity;
+        $cart->price = $cart->price * $request->quantity;
+        $cart->save();
+
+        return redirect('/cart');
+
     }
 
 }
