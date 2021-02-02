@@ -16,13 +16,16 @@ class ProductsController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('auth',['except'=>['index','show','search']]);
+        $this->middleware('auth',['except'=>['index','show','search','cat']]);
     }
+
 
     public function index()
     {
         $products = Product::paginate(30);
         return view('products',['products'=>$products]);
+
+        //return view('dashboard.index')-> with ('products', $products);
 
 
     }

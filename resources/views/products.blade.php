@@ -4,7 +4,7 @@
 
 <ul class="breadcrumb">
     <li>
-        <h3>  <small class="pull-right text-dark"> {{count($products)}} products are available </small></h3>
+        <h4 class="pull-right text-dark">   {{count($products)}} products are available </h4>
     </li>
 </ul>
 
@@ -30,19 +30,19 @@
 
                                     <a href="{{ route('products.show',['product'=>$product->id])}}"  style="text-decoration:none; " >
                                         <div class=" row"    >
-                                            <img src="{{$product->product_image}}" style="height:220px;" class="m-auto d-block" alt="No Available Image">
+                                            <img src="/storage/images/{{$product->product_image}}" style="height:220px;" class="m-auto d-block" alt="No Available Image">
                                         </div>
                                     </a>
 
 
 
                                         <div class="d-flex flex-row mt-4  justify-content-start" style="height:50px">
-                                            <div class=""><a style="text-decoration: none;" href="#">{{$product->name}}</a></div>
+                                            <div class=""><a style="text-decoration: none;" href="{{ route('products.show',['product'=>$product->id])}}">{{$product->name}}</a></div>
                                         </div>
 
                                         <div class=" d-flex flex-row mt-1 row justify-content-start">
                                             <div class="col-8 "><a style="text-decoration:none;"  href="{{ route('cat',['cat'=>$product->cat])}}" ><h6 class=" text-dark" >{{$product->cat}}</h6></a></div>
-                                            <div class="col-3"><h6 class=" text-dark">{{$product->price}}</h6></div>
+                                            <div class="col-3"><h6 class=" text-dark">{{$product->price}}EGP</h6></div>
                                         </div>
 
 

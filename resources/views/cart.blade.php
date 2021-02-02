@@ -44,7 +44,7 @@
 
                 {!! Form::open(['route' => 'UpdateQty','method'=> 'POST']) !!}
                 {!! Form::hidden('id', $order->id, ['class'=>'form-control']) !!}
-                {{Form::number('quantity', $order->quantity,['class'=> 'form-control w-100 row','placeholder'=> 'Quantity Number', 'max'=>'6'])}}
+                {{Form::number('quantity', $order->quantity,['class'=> 'form-control w-100 row','placeholder'=> 'Quantity Number', 'max'=>'6', 'min'=>'0'])}}
                 {{Form::submit('Update',['class'=> 'btn w-75', 'style'=>'position: absolute; left:0;'])}}
                 {!!Form::close()!!}
 

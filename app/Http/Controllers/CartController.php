@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Product;
 use App\Models\Cart;
+use Illuminate\Support\Facades\Auth;
 
 
 
@@ -16,6 +17,12 @@ class CartController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
+
     public function index()
     {
 
@@ -47,8 +54,7 @@ class CartController extends Controller
     public function store(Request $request)
     {
 
-       // $article = $request->isMethod('put') ? Articles::findOrFail($request->article_id) : new Articles;
-
+        // update cart quantity and create new cart
 
        if(Cart::where('user_id','=',$request->user_id)->where('item_id', '=', $request->item_id)->count() > 0)
        {
@@ -57,10 +63,12 @@ class CartController extends Controller
 
            $itemPrice = Product::find($request->item_id)->price;
 
-
-           $cart->quantity = $cart->quantity + 1;
-           $cart->price = $itemPrice * $cart->quantity;
-           $cart->save();
+            if($cart->quantity < 6)
+            {
+                $cart->quantity = $cart->quantity + 1;
+                $cart->price = $itemPrice * $cart->quantity;
+                $cart->save();
+            }
 
             return redirect()->back();
 

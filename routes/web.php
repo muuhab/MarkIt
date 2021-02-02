@@ -20,13 +20,19 @@ use App\Http\Controllers\UserController;
 //});
 
 Route::get('/','ProductsController@index')->name('home');
+Route::get('/home','ProductsController@index');
 Route::get('/search','ProductsController@search')->name('search');
 Route::get('/cat/{cat}','ProductsController@cat')->name('cat');
 Route::get('/signin', function () {
         return view('login');
-    })->name('signin');
+    })->name('signin')->middleware('guest');
 Auth::routes();
 Route::resource('products','ProductsController');
 Route::post('/cart/UpdateQty','CartController@updateqty')->name('UpdateQty');
 Route::resource('cart','CartController');
-Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+//Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+
+Route::resource('dashboard', 'DashboardController');
+
+
+
