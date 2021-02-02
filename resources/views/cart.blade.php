@@ -27,7 +27,7 @@
 
             <a href="{{ route('products.show',['product'=>$order->item_id])}}" >
                 <div class=" image ft-product-image " style=" padding:10px; ">
-                <img class="lazy image -loaded" width="60" height="60" src="{{$order->products->product_image}}" alt="Image" >
+                <img class="lazy image -loaded" width="60" height="60" src="/storage/images/{{$order->products->product_image}}" alt="Image" >
                 </div>
             </a>
 
