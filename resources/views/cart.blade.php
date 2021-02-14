@@ -31,7 +31,6 @@
                 </div>
             </a>
 
-
             <div class="col-5 mr-5 " style=" padding:10px; ">
                 <a  href="{{ route('products.show',['product'=>$order->item_id])}}" class="text-dark d-block mb-2"  style="font-size: 16px; font-weight: 500; line-height: 1.25; text-decoration:none;" >{{$order->products->name}}</a>
                 <a class=" text-primary" style="text-decoration: none;" href="{{ route('cat',['cat'=>$order->products->cat])}}" >{{$order->products->cat}}</a>

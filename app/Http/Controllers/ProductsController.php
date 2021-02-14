@@ -100,10 +100,10 @@ class ProductsController extends Controller
      */
     public function show($id)
     {
-        $products= Product::find($id);
+        $product= Product::find($id);
 
 
-        return view('product_details')->with('products',$products);
+        return view('product_details')->with('product',$product);
 
     }
 
