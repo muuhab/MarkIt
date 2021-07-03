@@ -1,54 +1,47 @@
 @extends('layouts.master')
 @section('content')
-
-
+<div id="" class=" pt-2">
+{{--
 <ul class="breadcrumb">
     <li>
-        <h4 class="pull-right text-dark">   {{count($products)}} products are available </h4>
+        <h4 class="pull-right text-dark"> {{count($products)}} products are available </h4>
     </li>
 </ul>
+--}}
+	<hr class="soft mt-0"/>
 
-	<hr class="soft"/>
-
-<div class=" flyout" style=" background-color: #fff; border-radius: 4px; " >
-
-    <div class="mr-2 ml-2">
-
-
-    <div class="" style="overflow:hidden;">
+<div class="flyout p-2 " style=" background-color: #fff;  min-height: 384px;" >
 
         <!-------------- Start Block View  ------------------------->
-                <div class="row">
+                <div class=" row">
 
                     @foreach ($products as $product)
-                    <div class="col-md-4 mt-2 mb-3">
-                        <!-- bbb_deals -->
-                        <div class="bbb_deals pt-5 " style="height:450px;">
-
-                            <div class="bbb_deals_slider_container">
-                                <div class=" bbb_deals_item">
-
-                                    <a href="{{ route('products.show',['product'=>$product->id])}}"  style="text-decoration:none; " >
-                                        <div class=" row"    >
-                                            <img src="/storage/images/{{$product->product_image}}" style="height:220px;" class="m-auto d-block" alt="No Available Image">
-                                        </div>
-                                    </a>
+                    <div class="col-xl-3 col-lg-4 col-md-6 mb-2">
 
 
+                        <!-- product card -->
+                        <a href="{{ route('products.show',['product'=>$product->id])}}" class="text-decoration-none text-dark">
 
-                                        <div class="d-flex flex-row mt-4  justify-content-start" style="height:50px">
-                                            <div class=""><a style="text-decoration: none;" href="{{ route('products.show',['product'=>$product->id])}}">{{$product->name}}</a></div>
+                        <div class="m-auto" style="height:auto; width: 100%; box-shadow: 1px 1px 5px 1px rgb(0 0 0 / 10%);">
+
+                                <div class="container p-0 m-auto w-100 h-100">
+
+                                        <div class="pb-1 pt-3 pr-3 pl-3 w-100 m-auto row"    >
+                                            <img src="/storage/images/{{$product->product_image}}" style="height:220px; width: 220px;" class="m-auto d-block" alt="No Available Image">
                                         </div>
 
-                                        <div class=" d-flex flex-row mt-1 row justify-content-start">
-                                            <div class="col-8 "><a style="text-decoration:none;"  href="{{ route('cat',['cat'=>$product->cat])}}" ><h6 class=" text-dark" >{{$product->cat}}</h6></a></div>
-                                            <div class="col-3"><h6 class=" text-dark">{{$product->price}}EGP</h6></div>
+                                        <div class="w-100 p-2 text-center mx-auto row">
+                                            <a class="text-decoration-none pb-1 text-dark col-12" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ; " href="{{ route('products.show',['product'=>$product->id])}}">{{ \Illuminate\Support\Str::limit($product->name, 20, $end='...') }}</a>
+
+                                            <a class="text-decoration-none text-secondary col-12" href="{{ route('cat',['cat'=>$product->cat])}}" ><h6 class="small" >{{$product->cat}}</h6></a>
+                                            <h6 style="font-size: 14px; font-weight: bold;" class="text-danger mx-auto col-12">{{$product->price}} EGP</h6>
+                                            <h6 class=" text-dark col-12" >Rating</h6>
                                         </div>
 
 
                                         @if(!Auth::guest())
 
-                                                <div class="mt-3">
+                                                <div class="h-auto pb-3 pr-3 pl-3">
                                                     {!! Form::open(['action' => 'CartController@store' ,'method'=> 'POST']) !!}
 
                                                         {!! Form::hidden('item_id', $product->id, ['class'=>'form-control']) !!}
@@ -61,22 +54,20 @@
 
                                         @endif
 
-
-                                </div>
                             </div>
                         </div>
+                        </a>
                     </div>
                     @endforeach
 
                 </div>
         <!-------------- End Block View  ------------------------->
-    </div>
-
 			<br class="clr"/>
 
-</div>
-</div>
 
+
+</div>
+</div>
 @endsection
 
 

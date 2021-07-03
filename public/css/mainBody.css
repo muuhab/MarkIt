@@ -1,0 +1,34 @@
+body{
+    background: #F5F5F5;
+    color:#282828;
+    margin: 0 auto;
+}
+
+
+.grid-body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container_main {
+    /* Take the remaining height */
+    flex-grow: 1;
+
+    /* Layout the left sidebar and main content */
+    display: flex;
+    flex-direction: row;
+}
+
+.container_left {
+    flex: 0 0 230px;
+}
+
+.container_middle {
+    /* Take the remaining width */
+    flex: 1;
+}
+
+

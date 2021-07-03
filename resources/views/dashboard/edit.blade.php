@@ -8,8 +8,7 @@
 
     <div class="row justify-content-center w-100 " style="width:fit-content;">
 
-        <h3 class="mt-3 mb-2">Edit Your Product</h3>
-        <div class="card w-100 bg-dark text-light mt-3 mb-5 ">
+        <div class="card w-100 text-light mt-3 mb-5 " style="background-color:#1C1E1F;">
 
             <div class="card-body w-100 ">
 
@@ -26,7 +25,7 @@
 
         <div class="form-group">
             {{Form::label('cat','Category',['class'=> ' d-block'])}}
-            {{Form::select('cat', array('Super Market'=> 'Super Market', 'Fashion' => 'Fashion', 'Health & Beauty' => 'Health & Beauty', 'Phones & Tablets' => 'Phones & Tablets', 'Home & Office' => 'Home & Office', 'Books' => 'Books', 'Electronics' => 'Electronics' ),['class'=> 'form-control w-25'])}}
+            {{Form::select('cat', array('Supermarket'=> 'Supermarket', 'Fashion' => 'Fashion', 'Health & Beauty' => 'Health & Beauty', 'Phones & Tablets' => 'Phones & Tablets', 'Home & Office' => 'Home & Office', 'Books' => 'Books', 'Electronics' => 'Electronics' ),['class'=> 'form-control w-25'])}}
         </div>
 
 
@@ -52,7 +51,7 @@
         </div>
 
     </div>
-
+        </div>
 </div>
 @endsection
 

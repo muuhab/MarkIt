@@ -1,10 +1,9 @@
 @extends('layouts.master')
 @section('content')
+<div class="container">
+	<div class="row h-100 flyout m-0 pb-3" >
 
-
-	<div class="row flyout" style=" background-color: #fff; border-radius: 4px; min-height: 384px; " >
-
-        <div class="col-6 text-center " id="wrapper1" >
+        <div class="col-lg-6 col-md-6 text-center " id="wrapper1" >
 
             <h5 class="mt-3">CREATE YOUR ACCOUNT</h5><br/>
             <form method="POST" action="{{ route('register') }}">
@@ -77,7 +76,7 @@
 
 
 
-		<div class="col-6  text-center"  >
+		<div class="col-lg-6 col-md-6  text-center" id="wrapper2" >
             <h5 class="mt-3" >ALREADY REGISTERED ?</h5>
             <form method="POST" action="{{ route('login') }}">
                 @csrf
@@ -110,29 +109,37 @@
                     </div>
                 </div>
 
+                {{--
                 <div class="form-group row">
                     <div class="col-md-6 offset-md-4">
                         <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                           <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                             <label class="form-check-label" for="remember">
                                 {{ __('Remember Me') }}
                             </label>
+
+
                         </div>
                     </div>
                 </div>
+                --}}
+
+
+
+                            <div class="col-md-6 mb-2 offset-md-4">
+                                @if (Route::has('password.request'))
+                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                        {{ __('Forgot Your Password?') }}
+                                    </a>
+                                @endif
+                            </div>
 
                 <div class="form-group row mb-0">
-                    <div class="col-md-8 offset-md-4">
+                    <div class="col-md-6 offset-md-4">
                         <button type="submit" class="btn btn-primary">
                             {{ __('Login') }}
                         </button>
-
-                        @if (Route::has('password.request'))
-                            <a class="btn btn-link" href="{{ route('password.request') }}">
-                                {{ __('Forgot Your Password?') }}
-                            </a>
-                        @endif
                     </div>
                 </div>
             </form>
@@ -142,6 +149,6 @@
 
 
 	</div>
-
+</div>
 @endsection
 

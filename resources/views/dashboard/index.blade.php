@@ -10,7 +10,6 @@
 
     <div class="row justify-content-center " style="width:fit-content;">
 
-        <h3 class="mt-3 mb-2">Your Products</h3>
         <div class="card bg-dark text-light mt-3 mb-5 ">
 
           <div class="card-body ">
