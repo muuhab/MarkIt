@@ -14,7 +14,7 @@ class AddCatToProducts extends Migration
     public function up()
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->string('cat');
+            $table->string('cat')->default('');
         });
     }
 

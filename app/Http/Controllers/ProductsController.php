@@ -44,7 +44,10 @@ class ProductsController extends Controller
     {
         $search=$request->get('search');
         $products=Product::where('name','like','%'.$search.'%')->paginate();
+        if($products->total()>0)
         return view('products')->with('products',$products);
+        else
+        return view('products')->with('products','No products Found');
 
     }
 

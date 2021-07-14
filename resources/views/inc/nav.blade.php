@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-12 col-md-6">
           <p class="small">
-              <i class="fas fa-envelope"></i> jessyzayeed93@gmail.com | <i class="fas fa-phone"></i> +91-9876543210
+              <i class="fas fa-envelope"></i> test@test.com | <i class="fas fa-phone"></i> +91-9876543210
           </p>
         </div>
 
@@ -115,7 +115,7 @@
 
       <ul class="navbar-nav justify-content-end mr-auto col-5">
 
-        <a class=" nav-item btn btn-link" href="{{route('cart.index')}}"><i class="fas fa-shopping-cart pl-0"></i><span class="badge badge-danger">3</span></a>
+        <a class=" nav-item btn btn-link" href="{{route('cart.index')}}"><i class="fas fa-shopping-cart pl-0"></i><span class="badge badge-danger"></span></a>
 
         @guest
         <li class="nav-item ml-md-3">
@@ -134,7 +134,7 @@
             </a>
 
             <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                <a href="/home" class="dropdown-item">Dashboard</a>
+                <a href="/dashboard" class="dropdown-item">Dashboard</a>
                 <a class="dropdown-item" href="{{ route('logout') }}"
                 onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">

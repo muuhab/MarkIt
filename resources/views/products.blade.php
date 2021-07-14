@@ -14,7 +14,10 @@
 
         <!-------------- Start Block View  ------------------------->
                 <div class=" row">
-
+                    @if (is_string($products))
+                        <div style="position: absolute;left:50%;font-size:20px;transform: translate(-50%)" >{{$products}}</div>
+                    @else
+                        
                     @foreach ($products as $product)
                     <div class="col-xl-3 col-lg-4 col-md-6 mb-2">
 
@@ -59,6 +62,7 @@
                         </a>
                     </div>
                     @endforeach
+                    @endif
 
                 </div>
         <!-------------- End Block View  ------------------------->

@@ -7,7 +7,7 @@
 
 
     <a href="{{ route('dashboard.create')}}" class="btn btn-dark mt-2 ">Add new product</a>
-
+    <a href="/home" class="btn btn-dark mt-2" style="position: absolute; right:20%" >Return</a>
     <div class="row justify-content-center " style="width:fit-content;">
 
         <div class="card bg-dark text-light mt-3 mb-5 ">
